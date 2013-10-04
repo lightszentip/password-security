@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Password-security by lightszentip</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password-security</h1>
+        <p>A module that encrypt and encode passwords. It also generate fake passwords.</p>
+
+        <p class="view"><a href="https://github.com/lightszentip/password-security">View the Project on GitHub <small>lightszentip/password-security</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/lightszentip/password-security/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/lightszentip/password-security/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/lightszentip/password-security">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="readme" class="anchor" href="#readme"><span class="octicon octicon-link"></span></a>README</h1>
+
+<h2>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>If you use maven, you need a maven build from the project. Then you can use the following dependency:</p>
+
+<pre><code>&lt;groupId&gt;com.lightszentip.module&lt;/groupId&gt;
+&lt;artifactId&gt;password-security&lt;/artifactId&gt;
+&lt;version&gt;1.0.0-RELEASE&lt;/version&gt;
+</code></pre>
+
+<h2>
+<a name="use-it" class="anchor" href="#use-it"><span class="octicon octicon-link"></span></a>Use it</h2>
+
+<p><strong>First</strong></p>
+
+<p>Create a new instance of "PasswordModule":</p>
+
+<pre><code>public PasswordModuleImpl(String secretId, String secretSaltPw, String secureSaltKey, EncryptionType typeEncrypt, AlgorithmType typeEncod, int randomPasswordLength) {
+</code></pre>
+
+<blockquote>
+<p>secretId - Salt value for encryption and encoding
+secretSaltPw - Salt value for password encoding
+secureSaltKey - Salt value for encryption
+typeEncrypt - Type for encryption
+typeEncod - Type for encoding
+randomPasswordLength - Length for fake passwords (honeywords)</p>
+</blockquote>
+
+<p><strong>Second</strong></p>
+
+<p>This function generate a random password:</p>
+
+<pre><code>public String generateRandomPassword(int length);
+</code></pre>
+
+<p>This function generate a password with encryption and encoding:</p>
+
+<pre><code>public String getCodePassword(String password)
+</code></pre>
+
+<p>This function generate a password with encryption and encoding and fake passwords:</p>
+
+<pre><code>public String[] getHoneyPasswordList(String password, int size)
+</code></pre>
+
+<p>This function checks, is the variable password the right password. For this you need the whole list from  "getHoneyPasswordList":</p>
+
+<pre><code>checkPassword(String[] passwordArray, String password)
+</code></pre>
+
+<p>If you want to encryption other values, you can use the following functions:</p>
+
+<pre><code>public String encrypt(String value, String key, EncryptionType type);
+public String decrypt(String value, String key, EncryptionType type);
+</code></pre>
+
+<p><strong>Example</strong></p>
+
+<pre><code>PasswordModule passwordEncoder = new PasswordModuleImpl("secretid", "salt", "ThisIsaSaltValue", EncryptionType.AES, AlgorithmType.SHA_512, 20);
+String[] passwordArray = passwordEncoder.getHoneyPasswordList("test", values);
+Assert.assertTrue(passwordEncoder.checkPassword(passwordArray, passwordEncoder.getCodePassword("test")));
+</code></pre>
+
+<h2>
+<a name="javasecurityinvalidkeyexception-illegal-key-size-or-default-parameters" class="anchor" href="#javasecurityinvalidkeyexception-illegal-key-size-or-default-parameters"><span class="octicon octicon-link"></span></a>java.security.InvalidKeyException: Illegal key size or default parameters</h2>
+
+<p>If you get the exception, then you need to download "Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files".</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/lightszentip">lightszentip</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
