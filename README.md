@@ -1,5 +1,7 @@
 # README #
 
+http://lightszentip.github.io/password-security/
+
 ## Getting Started ##
 
 If you use maven, you need a maven build from the project. Then you can use the following dependency:
