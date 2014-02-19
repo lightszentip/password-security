@@ -66,3 +66,7 @@ If you want to encryption other values, you can use the following functions:
 ## java.security.InvalidKeyException: Illegal key size or default parameters ##
 
 If you get the exception, then you need to download "Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files".
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lightszentip/password-security/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
