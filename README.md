@@ -21,11 +21,14 @@ The artefact is in the following repository:
     </repository>
 
 ## Use it ##
+
+Example application https://github.com/lightszentip/password-security-example-app
+
 **First**
 
 Create a new instance of "PasswordModule":
 
-    public PasswordModuleImpl(String secretId, String secretSaltPw, String secureSaltKey, EncryptionType typeEncrypt, AlgorithmType typeEncod, int randomPasswordLength) {
+    PasswordModule passwordModule = new PasswordModuleImpl(String secretId, String secretSaltPw, String secureSaltKey, EncryptionType typeEncrypt, AlgorithmType typeEncod, int randomPasswordLength)
 
 > secretId - Salt value for encryption and encoding
 > secretSaltPw - Salt value for password encoding
@@ -34,7 +37,7 @@ Create a new instance of "PasswordModule":
 > typeEncod - Type for encoding
 > randomPasswordLength - Length for fake passwords (honeywords)
 
-**Second**
+**Functions**
     
 This function generate a random password:
 
