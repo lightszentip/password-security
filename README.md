@@ -2,6 +2,8 @@
 
 http://lightszentip.github.io/password-security/
 
+https://travis-ci.org/lightszentip/password-security.svg?branch=master
+
 ## Getting Started ##
 
 If you use maven, you need a maven build from the project. Then you can use the following dependency:
