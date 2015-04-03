@@ -2,7 +2,7 @@
 
 http://lightszentip.github.io/password-security/
 
-https://travis-ci.org/lightszentip/password-security.svg?branch=master
+[![Build Status](https://travis-ci.org/lightszentip/password-security.svg?branch=master)](https://travis-ci.org/lightszentip/password-security)
 
 ## Getting Started ##
 
