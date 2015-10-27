@@ -13,14 +13,7 @@ If you use maven, you need a maven build from the project. Then you can use the 
 	<version>1.0.0-RELEASE</version>
 
 
-The artefact is in the following repository:
-
-    <repository>
-       <id>lightszentip.public.maven.repository</id>
-       <name>Public maven repository Lightszentip on GitHub</name>
-       <url>https://raw.github.com/lightszentip/maven.repository/master</url>
-       <layout>default</layout>
-    </repository>
+The artifact is in the maven central repository.
 
 ## Use it ##
 
