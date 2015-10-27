@@ -8,6 +8,8 @@
 	<packaging>jar</packaging>
 
 	<name>PasswordSecurityModule</name>
+	<description>A module that encrypt and encode passwords. It also generate fake passwords.</description>
+	<url>http://lightszentip.github.io/password-security/</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -32,6 +34,13 @@
 			<comments>A business-friendly OSS license</comments>
 		</license>
 	</licenses>
+	
+	<scm>
+	    <connection>scm:git:git://github.com/lightszentip/password-security.git</connection>
+	    <developerConnection>scm:git:git@github.com:lightszentip/password-security.git</developerConnection>
+	    <tag>HEAD</tag>
+	    <url>https://github.com/lightszentip/password-security</url>
+	 </scm>
 
 
 	<developers>
